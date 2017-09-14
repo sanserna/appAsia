@@ -25,23 +25,6 @@
         "wrap-iife": [2, "outside"],
         "new-cap": 0
     },
-    "globals": {
-        "$": false,
-        "jQuery": false,
-        "document": false,
-        "window": false,
-        "CONFIG": false,
-        "app": false,
-        "slm": false,
-        "startObj": false,
-        "JSON3": false,
-        "alert": false,
-        "interceptors": false,
-        "events": false,
-        "numeral": false,
-        "moment": false,
-        "Handlebars": false,
-        "HBTemplates": false
-    },
+    "globals": {},
     "extends": "google"
 }

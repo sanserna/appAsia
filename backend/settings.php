@@ -1,19 +1,23 @@
 <?php
+
 return [
     'settings' => [
         'displayErrorDetails' => true, // set to false in production
         'addContentLengthHeader' => false, // Allow the web server to send the content-length header
 
-        // Renderer settings
+        // renderer settings
         'renderer' => [
-            'template_path' => __DIR__ . '/../templates/',
+            'template_path' => ROOT . 'app/templates/',
         ],
 
-        // Monolog settings
+        // monolog settings
         'logger' => [
             'name' => 'slim-app',
             'path' => ROOT . 'logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
+
+        // database
+        'db' => DATABASE
     ],
 ];

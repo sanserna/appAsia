@@ -6,5 +6,10 @@ RewriteEngine On
 #
 # RewriteBase /
 
+# Rewrite to API
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ index.php [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*) api/index.php/$1 [L]
+# Rewrite all other queries to the front controller.
+RewriteRule ^([^\.]+)$ $1.html [NC]
+

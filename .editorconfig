@@ -10,6 +10,6 @@ trim_trailing_whitespace = true
 indent_size = 4
 indent_style = space
 
-[*.{html,xml,pug,handlebars}]
+[*.{html,xml,pug,handlebars,vue}]
 indent_size = 2
 indent_style = space
