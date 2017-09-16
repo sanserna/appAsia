@@ -15,7 +15,25 @@ export const store = new Vuex.Store({
 
     },
 
-    getters: {},
+    getters: {
+
+        countriesCitiesTableItems: (state, getters) => countryId => {
+
+            let country = state.countries.find(country => country.id === countryId);
+
+            return country.cities.map(city => {
+
+                return {
+                    cityName: city.name,
+                    cityInternalPosition: city.internal_position,
+                    cityArrivalDate: city.arrival_date
+                };
+
+            });
+
+        }
+
+    },
 
     mutations: {
 

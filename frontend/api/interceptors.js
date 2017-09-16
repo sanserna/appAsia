@@ -1,9 +1,15 @@
 import axios from 'axios';
 
+function onDownloadProgress (progressEvent) {
+
+}
+
 export default function interceptors () {
 
     // request interceptor
     axios.interceptors.request.use(function (config) {
+
+        config.onDownloadProgress = onDownloadProgress;
 
         return config;
 
